@@ -1,0 +1,1 @@
+far fa-edit add-btn

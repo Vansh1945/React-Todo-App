@@ -1,13 +1,162 @@
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #70e1f5, #ffd194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main Div Container */
+.main-div {
+  background-color: #ffffff;
+  width: 450px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Child Div Styling */
+.child-div figure img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.child-div figure figcaption {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Add Items Input and Button */
+.addItems {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.addItems input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.addItems input:focus {
+  border-color: 70e1f5#70e1f5;
+}
+
+/* Add Button */
+.add-btn {
+  background: #55dff8;
+  color: white;
+  padding: 10px;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #00b5d5;
+}
+
+/* Show Items Styling */
+.showItems {
+  margin-top: 20px;
+}
+
+.eachItem {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Item Text */
+.eachItem h3 {
+  font-size: 1.2rem;
+  color: #333;
+  word-wrap: break-word;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Edit and Delete Button Group */
+.eachItem i {
+  color: #007bff;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Hover effects for Edit and Delete */
+.eachItem i:hover {
+  color: #0056b3;
+}
+
+/* Delete Icon Styling */
+.far.fa-trash-alt {
+  color: #ffffff;
+}
+.far.fa-edit {
+  color: #ffffff;
+}
+
+
+/* Clear All Button */
+.showItems .btn {
+  background-color: #ff5454;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Clear All Button Hover Effect */
+.showItems .btn:hover {
+  background-color: #ff1d1d;
+}
+
+/* Button Text Hover Effect */
+.showItems .btn span {
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.showItems .btn:hover span {
+  padding-right: 25px;
+}
+
+.showItems .btn:hover span:after {
+  content: '✓';
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0.5s;
 }
